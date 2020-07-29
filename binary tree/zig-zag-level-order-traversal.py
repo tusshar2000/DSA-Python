@@ -13,7 +13,8 @@ class Solution:
             return None
         
         queue = [root]               #queue is used to keep track of nodes at current level.   
-        level = 1                    #because we use current level for deriving answer of                                        #next level, so assigned level=1 and not level=0.
+        level = 1                    #because we use current level for deriving answer of     
+                                     #next level, so assigned level=1 and not level=0.
         path = [[root.val]]          #this maintains our answer.
         
         while True:
@@ -34,7 +35,8 @@ class Solution:
             else:
                 path.append([node.val for node in this_level_path])
             
-            queue = this_level_path  #assign next level nodes to the queue making it current                                      #level for the next iteration and loop over again.
+            queue = this_level_path  #assign next level nodes to the queue making it current    
+                                     #level for the next iteration and loop over again.
             level += 1               #obvious!
         
         return path                  #we made it.
