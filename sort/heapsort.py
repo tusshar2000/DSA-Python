@@ -7,11 +7,10 @@ def heapify(arr, n, i):
     right_child_index = 2*i + 2
 
     #check if left child exists, and is greater than root.
-    if (left_child_index < n) and (arr[i] < arr[left_child_index]):
+    if (left_child_index < n) and (arr[largest] < arr[left_child_index]):
         largest = left_child_index
-    
-    #check if right child exists, and is greater than largest element, here we check with largest element,
-    #because we could have swapped if with left in previous operation.
+   
+    #check if left child exists, and is greater than largest element.
     if (right_child_index < n) and (arr[largest] < arr[right_child_index]):
         largest = right_child_index 
     
